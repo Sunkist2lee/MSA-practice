@@ -106,6 +106,7 @@
                 'customerId': '',
                 'amount': 0,
                 'address': '',
+                'address': '',
             }
         },
         methods:{
