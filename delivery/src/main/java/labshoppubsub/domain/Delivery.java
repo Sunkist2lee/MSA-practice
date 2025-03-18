@@ -7,7 +7,6 @@ import java.util.List;
 import java.util.Map;
 import javax.persistence.*;
 import labshoppubsub.DeliveryApplication;
-import labshoppubsub.domain.DeliveryAdded;
 import lombok.Data;
 
 @Entity
@@ -20,17 +19,11 @@ public class Delivery {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    private Long orderId;
+    private Long customerId;
 
     private String address;
 
     private String status;
-
-    @PostPersist
-    public void onPostPersist() {
-        DeliveryAdded deliveryAdded = new DeliveryAdded(this);
-        deliveryAdded.publishAfterCommit();
-    }
 
     public static DeliveryRepository repository() {
         DeliveryRepository deliveryRepository = DeliveryApplication.applicationContext.getBean(

@@ -1,7 +1,7 @@
 # 
 
 ## Model
-www.msaez.io/#/courses/cna-full/f34b48e0-ff3d-11ef-ada3-31b936e467fd/pub-sub-2022/sun95132@naver.com
+www.msaez.io/#/courses/cna-full/f34b48e0-ff3d-11ef-ada3-31b936e467fd/pub-sub-2022
 
 ## Before Running Services
 ### Make sure there is a Kafka server running
@@ -34,7 +34,7 @@ mvn spring-boot:run
 ## Test by API
 - order
 ```
- http :8088/orders id="id"productId="productId"qty="qty"customerId="customerId"amount="amount"address="address"
+ http :8088/orders id="id"productId="productId"qty="qty"customerId="customerId"amount="amount"address="address"address="address"
 ```
 - inventory
 ```
@@ -42,7 +42,6 @@ mvn spring-boot:run
 ```
 - delivery
 ```
- http :8088/deliveries id="id"orderId="orderId"address="address"status="status"
 ```
 
 
