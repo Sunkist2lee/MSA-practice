@@ -30,8 +30,6 @@ public class Order {
 
     private String address;
 
-    private String address;
-
     @PostPersist
     public void onPostPersist() {
         OrderPlaced orderPlaced = new OrderPlaced(this);

@@ -19,7 +19,7 @@ public class Delivery {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    private Long customerId;
+    private String customerId;
 
     private String address;
 
@@ -38,6 +38,9 @@ public class Delivery {
 
         // Example 1:  new item 
         Delivery delivery = new Delivery();
+        delivery.setCustomerId(orderPlaced.getCustomerId());
+        delivery.setAddress(orderPlaced.getAddress());
+        delivery.setStatus("READY");
         repository().save(delivery);
     
     }
